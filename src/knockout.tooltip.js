@@ -14,7 +14,7 @@
             };
             behaviour = $.extend(behaviour, bindings.options);
         }
-        return $.extend(ko.bindingHandlers.tooltip.defaultTooltipOptions, behaviour);
+        return $.extend({}, ko.bindingHandlers.tooltip.defaultTooltipOptions, behaviour);
     },
     init: function (element, valueAccessor, allBindingsAccessor, viewModel) {
         var allBindings = allBindingsAccessor();
